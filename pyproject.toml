@@ -1,7 +1,27 @@
 [project]
 name = "siphon"
 version = "0.1.0"
-description = "Add your description here"
+description = "Utility to scrape data from common social media apps"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "aioboto3>=13.0.0",
+    "appium-python-client>=4.0.0",
+    "beanie>=2.1.0",
+    "easyocr>=1.7.0",
+    "insightface>=0.7.3",
+    "motor>=3.4.0",
+    "numpy>=1.26.0",
+    "onnxruntime>=1.18.0",
+    "opencv-python>=4.9.0",
+    "Pillow>=10.0.0",
+    "python-dotenv>=1.0.0",
+    "typer>=0.26.7",
+]
+
+[project.scripts]
+siphon = "siphon.main:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
